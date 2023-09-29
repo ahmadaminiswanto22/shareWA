@@ -14,6 +14,30 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="js/datatables-simple-demo.js"></script>
+<script type="text/javascript">
+            function copyText(element) {
+                var range, selection, worked;
+
+                if (document.body.createTextRange) {
+                    range = document.body.createTextRange();
+                    range.moveToElementText(element);
+                    range.select();
+                } else if (window.getSelection) {
+                    selection = window.getSelection();
+                    range = document.createRange();
+                    range.selectNodeContents(element);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+
+                try {
+                    document.execCommand('copy');
+                    alert('Text copied');
+                } catch (err) {
+                    alert('Unable to copy text');
+                }
+            }
+        </script>
 </body>
 
 </html>

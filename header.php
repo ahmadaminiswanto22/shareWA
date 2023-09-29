@@ -46,7 +46,7 @@
                         <div class="sb-sidenav-menu-heading">Addons</div>
                         <a class="nav-link" href="sendwa.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
-                            Kirim Undangan
+                            Kirim Pesan
                         </a>
                         <a class="nav-link" href="tabel.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>

@@ -4,8 +4,13 @@ include "header.php";
 include 'koneksi.php';
 
 ?>
-
+<?php 
+	if(isset($_GET['berhasil'])){
+		echo "<p>".$_GET['berhasil']." Data berhasil di import.</p>";
+	}
+	?>
 <div class="card mb-4">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
         Data Isi Pesan
@@ -15,6 +20,12 @@ include 'koneksi.php';
         <button type="button" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Buat Pesan
         </button>
+        <a href="upload_data.php" type="button" class="btn btn-primary mb-4 ml-4" >
+            Upload Pesan
+        </a>
+        <div class="btn float-right">
+            <a class="btn btn-secondary mb-4 ml-4" href="file-excel/template_pesan.xls" target="_blank" role="button"><i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i> Download Template Excel</a>                               
+        </div> 
         <table id="datatablesSimple">
             <thead>
                 <tr>

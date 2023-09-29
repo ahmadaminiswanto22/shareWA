@@ -5,10 +5,14 @@ if (mysqli_connect_errno()) {
     echo "koneksi database gagal:" . mysqli_connect_errno();
 }
 if (isset($_POST['simpan'])) {
-    $salam = htmlspecialchars($_POST['salam']);
-    $isi = htmlspecialchars($_POST['isi']);
-    $penutup = htmlspecialchars($_POST['penutup']);
+    $salam = $_POST['salam'];
+    $isi = $_POST['isi'];
+    $penutup = $_POST['penutup'];
     $id = 22;
+    // $salam = htmlspecialchars($_POST['salam']);
+    // $isi = htmlspecialchars($_POST['isi']);
+    // $penutup = htmlspecialchars($_POST['penutup']);
+    // $id = 22;
 
     urlencode(mysqli_query($conn, "REPLACE INTO isi_pesan VALUES('$id','$salam','$isi','$penutup')"));
     // $query = "UPDATE isi_pesan SET

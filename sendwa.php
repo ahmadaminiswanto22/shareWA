@@ -108,7 +108,7 @@ include "header.php";
                         Isi Pesan dan Data Siswa
                     </div>
                     <div class="card-body">
-                        <p>
+                        <p onClick='copyText(this)'>
                             <?= urldecode($data['salam']); ?>
                             <br>
                             <?= urldecode($data['isi']); ?>
@@ -122,6 +122,8 @@ include "header.php";
                             Bulan : <?= @$bulan ?>
                             <br>
                             <?= urldecode($data['penutup']); ?>
+                            <br><br>
+                            <button type="button" class="btn buat-link"> Copy Teks Kalimat </button>
                         </p>
                     </div>
                     <?= "
